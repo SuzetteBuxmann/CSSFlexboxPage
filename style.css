@@ -1,0 +1,177 @@
+* {
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+	}
+body {
+	background-color: #ececec;
+	font-family: 'Barlow Condensed', sans-serif;
+}
+header{
+    background-color: #8e9ea1;
+	display: flex;
+	align-items: center; /*align items vertically*/
+}
+header a{
+    color: #fff;
+    text-decoration: none;
+    padding: 20px;
+	display: block; /*allows the padding to display*/
+}
+header ul{
+    list-style-type: none;
+}
+
+#main-links ul{
+	display: flex;
+}
+#social-links ul{
+	display: flex;
+}
+#logo {
+	font-family: 'Oxygen', sans-serif;
+	font-size: 2em;
+	margin: 0 auto; /*auto creates the left and right margin between the navs on the left and the right*/
+}
+
+#intro {
+	min-height: 400px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center; /*align items horizontally*/
+	align-items: center; /*align items vertically*/
+	
+	/*gradient from uigradients, tweaked a bit, and with bg image incorporated*/
+	background: #8e9eab;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, rgba(238,242,243,0.5), rgba(142,158,171,1)),
+        url(img/cover.jpg);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, rgba(238,242,243,0.5), rgba(142,158,171,1)),
+        url(img/cover.jpg);/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: cover;
+}
+#intro p{
+	width: 50%;
+	margin: 0 auto; /*auto creates the left and right margin between the navs on the left and the right*/
+}
+#intro h1{
+	font-size: 2em;
+	padding: 20px;
+	font-family: 'Oxygen', sans-serif;
+}
+
+#showcase {
+	display: flex;
+}
+#showcase aside {
+	flex-basis: 300px;
+	flex-shrink: 0;
+	background-color: #fff;
+}
+#showcase aside h3 {
+	padding: 15px;
+}
+#showcase aside ul {
+	list-style-type: none;
+}
+#showcase aside a {
+	display: block;
+	padding: 20px;
+	text-decoration: none;
+	color: #000;
+	transition: background-color 0.3s;
+}
+#showcase aside a:hover {
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+
+.cards-container {
+	padding: 20px;
+	display: flex;
+	flex-wrap: wrap;
+}
+.card {
+	flex-basis: 250px;
+	flex-grow: 1; /*somehow made all the cards the same size*/
+	display: flex;
+	flex-direction: column;
+	max-width: 400px;
+	margin: 10px;
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+	background-color: #fff;
+	transition: box-shadow 0.3s;
+}
+.card:hover {
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+.card .card-img {
+	height: 200px;
+	overflow: hidden;
+	transform: scale(0.95);
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+	transition: transform 0.3s;
+}
+.card:hover .card-img {
+	transform: scale(1);
+}
+.card .card-img img {
+	height: 100%;
+	min-width: 100%;
+}
+.card .card-title {
+	padding: 10px;
+}
+.card .card-desc {
+	padding: 0px 10px 10px 10px;
+	margin-bottom: 20px;
+}
+.card .call-to-action {
+	margin: 10px;
+	margin-top: auto; /*pushes it to the bottom*/
+	align-self: flex-start;/*shortens the box to the left somehow*/
+}
+.card .call-to-action a {
+	display: block;
+	padding: 10px 15px;
+	color: #fff;
+	background-color: #8e9ea1;
+	text-decoration: none;
+	border: 1px solid transparent;
+	transition-property: background-color, color, border;
+	transition-duration: 0.3s;
+}
+.card .call-to-action a:hover {
+	background-color: transparent;
+	color: #8e9ea1;
+	border: 1px solid #8e9ea1;
+}
+
+#footer {
+	font-family: 'Oxygen', sans-serif;
+	font-size: 2rem;
+	color: #fff;
+	background-color: teal;
+	padding: 20px;
+	text-align: center;
+}
+.footer-note {
+	font-size: 14px;
+}
+
+@media screen and (max-width: 720px){
+    header{
+        flex-direction: column;
+    }
+    #logo{
+        order: -1;
+    }
+    #showcase aside{
+        display: none;
+    }
+    #intro h1{
+        font-size: 1.5em;
+    }
+    #intro p{
+        width: 80%;
+    }
+}
